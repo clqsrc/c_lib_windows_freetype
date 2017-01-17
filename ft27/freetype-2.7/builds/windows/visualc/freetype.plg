@@ -1,0 +1,289 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: freetype - Win32 Release Multithreaded--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP68E8.tmp" with contents
+[
+/MT /Za /W4 /GX /O2 /I "..\..\..\include" /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "FT2_BUILD_LIBRARY" /Fo"..\..\..\objs\release_mt/" /Fd"..\..\..\objs\release_mt/" /FD /c 
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\bdf\bdf.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cff\cff.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbase.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cache\ftcache.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftglyph.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftinit.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftmm.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftsystem.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pcf\pcf.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\psaux\psaux.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pshinter\pshinter.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\psnames\psmodule.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\raster\raster.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfnt.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\smooth\smooth.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\truetype.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\type1\type1.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cid\type1cid.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\type42\type42.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\winfonts\winfnt.c"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP68E8.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP68E9.tmp" with contents
+[
+/MT /Ze /W4 /GX /O2 /I "..\..\..\include" /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "FT2_BUILD_LIBRARY" /Fo"..\..\..\objs\release_mt/" /Fd"..\..\..\objs\release_mt/" /FD /c 
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\builds\windows\ftdebug.c"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP68E9.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP68EA.tmp" with contents
+[
+/MT /Za /W4 /GX /O2 /I "..\..\..\include" /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "FT2_BUILD_LIBRARY" /FR"..\..\..\objs\release_mt/" /Fo"..\..\..\objs\release_mt/" /Fd"..\..\..\objs\release_mt/" /FD /c 
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\autofit.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbbox.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbdf.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbitmap.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftfntfmt.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftfstype.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftgasp.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftgxval.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\gzip\ftgzip.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\lzw\ftlzw.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftotval.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftpfr.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftstroke.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftsynth.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\fttype1.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftwinfnt.c"
+"D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pfr\pfr.c"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP68EA.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP68EB.tmp" with contents
+[
+/nologo /out:"..\..\..\objs\freetype27MT.lib" 
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\autofit.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\bdf.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\cff.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftbase.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftbbox.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftbdf.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftbitmap.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftfntfmt.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftfstype.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftgasp.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftcache.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftdebug.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftglyph.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftgxval.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftgzip.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftinit.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftlzw.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftmm.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftotval.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftpfr.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftstroke.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftsynth.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftsystem.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\fttype1.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftwinfnt.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\pcf.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\pfr.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\psaux.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\pshinter.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\psmodule.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\raster.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\sfnt.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\smooth.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\truetype.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\type1.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\type1cid.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\type42.obj"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\winfnt.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1\AppData\Local\Temp\RSP68EB.tmp"
+<h3>Output Window</h3>
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MT /Za /W4 /GX /O2 /I "..\..\..\include" /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "FT2_BUILD_LIBRARY" /Fo"..\..\..\objs\release_mt/" /Fd"..\..\..\objs\release_mt/" /FD /c 
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\bdf\bdf.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cff\cff.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbase.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cache\ftcache.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftglyph.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftinit.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftmm.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftsystem.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pcf\pcf.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\psaux\psaux.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pshinter\pshinter.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\psnames\psmodule.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\raster\raster.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfnt.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\smooth\smooth.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\truetype.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\type1\type1.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cid\type1cid.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\type42\type42.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\winfonts\winfnt.c"
+
+bdf.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\bdf\bdfdrivr.c(115) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\bdf\bdfdrivr.c(155) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\bdf\bdfdrivr.c(169) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+cff.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cff\cf2hints.c(1638) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cff\cf2intrp.c(347) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cff\cf2intrp.c(688) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cff\cf2intrp.c(703) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\cff\cf2intrp.c(1590) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+ftbase.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftobjs.c(2317) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+ftcache.c
+ftglyph.c
+ftinit.c
+ftmm.c
+ftsystem.c
+pcf.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pcf\pcfread.c(1306) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pcf\pcfread.c(1315) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pcf\pcfread.c(1350) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pcf\pcfread.c(1360) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+psaux.c
+pshinter.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pshinter\pshglob.c(536) : warning C4244: 'initializing' : conversion from 'int ' to 'short ', possible loss of data
+psmodule.c
+raster.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\raster\ftraster.c(1520) : warning C4244: 'initializing' : conversion from 'int ' to 'char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\raster\ftraster.c(1656) : warning C4244: 'initializing' : conversion from 'int ' to 'char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\raster\ftraster.c(1761) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\raster\raster.c(28) : warning C4514: 'FT_MulFix_i386' : unreferenced inline function has been removed
+        ..\..\..\include\freetype/internal/ftcalc.h(152) : see declaration of 'FT_MulFix_i386'
+sfnt.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfobjs.c(1095) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfobjs.c(1517) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfobjs.c(1529) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfobjs.c(1534) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfobjs.c(1536) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\sfnt\sfobjs.c(1551) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+smooth.c
+truetype.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgload.c(711) : warning C4244: '=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgload.c(713) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgload.c(1024) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgload.c(1362) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgload.c(1364) : warning C4244: '=' : conversion from 'const int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgload.c(2309) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(5101) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(5465) : warning C4244: '=' : conversion from 'const int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(5564) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(7563) : warning C4244: '=' : conversion from 'int ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgxvar.c(177) : warning C4244: '+=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgxvar.c(183) : warning C4244: '+=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgxvar.c(191) : warning C4244: '+=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttgxvar.c(196) : warning C4244: '+=' : conversion from 'int ' to 'unsigned short ', possible loss of data
+type1.c
+type1cid.c
+type42.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\type42\t42parse.c(939) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+winfnt.c
+Generating Code...
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(2944) : warning C4702: unreachable code
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(2990) : warning C4702: unreachable code
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(3013) : warning C4702: unreachable code
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(3036) : warning C4702: unreachable code
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\truetype\ttinterp.c(3059) : warning C4702: unreachable code
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftobjs.c(4794) : warning C4702: unreachable code
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftobjs.c(4795) : warning C4702: unreachable code
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MT /Ze /W4 /GX /O2 /I "..\..\..\include" /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "FT2_BUILD_LIBRARY" /Fo"..\..\..\objs\release_mt/" /Fd"..\..\..\objs\release_mt/" /FD /c 
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\builds\windows\ftdebug.c"
+
+ftdebug.c
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /MT /Za /W4 /GX /O2 /I "..\..\..\include" /D "NDEBUG" /D "WIN32" /D "_MBCS" /D "_LIB" /D "FT2_BUILD_LIBRARY" /FR"..\..\..\objs\release_mt/" /Fo"..\..\..\objs\release_mt/" /Fd"..\..\..\objs\release_mt/" /FD /c 
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\autofit.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbbox.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbdf.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbitmap.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftfntfmt.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftfstype.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftgasp.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftgxval.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\gzip\ftgzip.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\lzw\ftlzw.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftotval.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftpfr.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftstroke.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftsynth.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\fttype1.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftwinfnt.c"
+   "D:\test3\gd_test1\libs\ft27\freetype-2.7\src\pfr\pfr.c"
+
+autofit.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\aflatin.c(1552) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\aflatin.c(1613) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\aflatin.c(1653) : warning C4244: '=' : conversion from 'int ' to 'short ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\aflatin.c(2883) : warning C4244: 'initializing' : conversion from 'unsigned long ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\aflatin.c(2884) : warning C4244: 'initializing' : conversion from 'unsigned long ' to 'unsigned char ', possible loss of data
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\autofit\afloader.c(147) : warning C4244: 'initializing' : conversion from 'int ' to 'unsigned char ', possible loss of data
+ftbbox.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftbbox.c(510) : warning C4514: 'FT_MulFix_i386' : unreferenced inline function has been removed
+        ..\..\..\include\freetype/internal/ftcalc.h(152) : see declaration of 'FT_MulFix_i386'
+ftbdf.c
+ftbitmap.c
+ftfntfmt.c
+ftfstype.c
+ftgasp.c
+ftgxval.c
+ftgzip.c
+ftlzw.c
+ftotval.c
+ftpfr.c
+ftstroke.c
+D:\test3\gd_test1\libs\ft27\freetype-2.7\src\base\ftstroke.c(756) : warning C4244: '+=' : conversion from 'int ' to 'short ', possible loss of data
+ftsynth.c
+fttype1.c
+ftwinfnt.c
+pfr.c
+Generating Code...
+Creating library...
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP73BA.tmp" with contents
+[
+/nologo /o"..\..\..\objs\release_mt/freetype.bsc" 
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\autofit.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftbbox.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftbdf.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftbitmap.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftfntfmt.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftfstype.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftgasp.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftgxval.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftgzip.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftlzw.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftotval.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftpfr.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftstroke.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftsynth.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\fttype1.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\ftwinfnt.sbr"
+"\test3\gd_test1\libs\ft27\freetype-2.7\objs\release_mt\pfr.sbr"]
+Creating command line "bscmake.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP73BA.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+freetype27MT.lib - 0 error(s), 54 warning(s)
+</pre>
+</body>
+</html>

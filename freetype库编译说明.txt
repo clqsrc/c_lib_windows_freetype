@@ -1,0 +1,23 @@
+
+
+
+freetype 库编译说明
+
+所用代码为官方 freetype-2.7 版本.编译为静态库的话,目录 freetype-2.7\builds\windows\visualc 
+下即有 vc6 可编译的工程文件. 也有其他 vs 版本的工程文件,考虑兼容性最大化,这里用的 vc6 编译.
+
+
+builds\windows\ft27_vc6 下自己参考 builds\windows\visualc 建立的工程,有个关键点是一定要设置为不使用预编译头文件.
+
+
+include\freetype\config_dll 下是参考文章 "FreeType编译及使用心得" 建立的 dll 专用配置.
+
+
+不过那样修改得太多了,最终只是将原 include 目录备份一下,这样只需要修改 ftconfig.h
+中的导出函数声明就可以了.
+
+
+--------------------------------------------------
+
+ft27.zip 文件为从官网下载的原始代码. 
+

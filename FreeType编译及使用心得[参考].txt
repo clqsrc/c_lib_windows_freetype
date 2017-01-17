@@ -1,0 +1,119 @@
+FreeType编译及使用心得
+FreeType是一款字体服务库，它支持多种字体，并且提供高效，高质量的文字。
+freetype相关介绍见：http://blog.csdn.net/ganxingming/archive/2006/06/05/774796.aspx
+
+1, 编译FreeType
+解压后进入.\include\freetype，复制config到当前文件夹，随便去个什么名，这里我用custom_config
+然后进入 .\builds\win32\visualc
+这里是vs工程，因为FreeType的支持相当广泛，有很多我们不需要东西，因此需要重新编译FreeType。
+而刚才我们复制的文件夹中，就是FreeType的可定制文件
+打开工程后，将你刚才复制的文件夹加入到工程中，即custom_config
+然后打开ft2build.h
+可以看到这里包含了一个文件，
+#include <freetype/config/ftheader.h>
+这个文件就是用于定制FreeType的主要文件，我们要做的就是创建自己的定制文件，将其替代这个文件，将其改成
+#include <freetype/custom_config/ftheader.h>
+custom_config是你自己的文件夹哈
+然后进入custom_config/ftheader.h
+修改这几行
+#define FT_CONFIG_CONFIG_H   <freetype/config/ftconfig.h>
+#define FT_CONFIG_STANDARD_LIBRARY_H   <freetype/config/ftstdlib.h>
+#define FT_CONFIG_OPTIONS_H   <freetype/config/ftoption.h>
+#define FT_CONFIG_MODULES_H   <freetype/config/ftmodule.h>
+改成
+#define FT_CONFIG_CONFIG_H   <freetype/custom_config/ftconfig.h>
+#define FT_CONFIG_STANDARD_LIBRARY_H   <freetype/custom_config/ftstdlib.h>
+#define FT_CONFIG_OPTIONS_H   <freetype/custom_config/ftoption.h>
+#define FT_CONFIG_MODULES_H   <freetype/custom_config/ftmodule.h>
+
+接着进入custom_config/ftmodule.h
+这个文件是FreeType的模块注册，我把它改成了
+/*FT_USE_MODULE(autofit_module_class)*/
+FT_USE_MODULE(tt_driver_class)
+/*FT_USE_MODULE(t1_driver_class)*/
+/*FT_USE_MODULE(cff_driver_class)*/
+/*FT_USE_MODULE(t1cid_driver_class)*/
+/*FT_USE_MODULE(pfr_driver_class)*/
+/*FT_USE_MODULE(t42_driver_class)*/
+/*FT_USE_MODULE(winfnt_driver_class)*/
+/*FT_USE_MODULE(pcf_driver_class)*/
+/*FT_USE_MODULE(psaux_module_class)*/
+/*FT_USE_MODULE(psnames_module_class)*/
+/*FT_USE_MODULE(pshinter_module_class)*/
+/*FT_USE_MODULE(ft_raster1_renderer_class)*/
+FT_USE_MODULE(sfnt_module_class)
+FT_USE_MODULE(ft_smooth_renderer_class)
+/*FT_USE_MODULE(ft_smooth_lcd_renderer_class)*/
+/*FT_USE_MODULE(ft_smooth_lcdv_renderer_class)*/
+/*FT_USE_MODULE(bdf_driver_class)*/
+只留下了3个模块
+好，现在FreeType定制完毕了，但是还有个问题，FreeType是编译的静态链接库，我们一般是使用动态链接库的，
+因此需要将其修改成动态链接库。
+进入custom_config/ftconfig.h，将
+#ifndef FT_EXPORT
+#ifdef __cplusplus
+#define FT_EXPORT( x )   extern "C"   x
+#else
+#define FT_EXPORT( x )   extern   x
+#endif
+改成
+#ifdef   DLL_EXPORT
+#undef   DLL_EXPORT
+#define DLL_EXPORT   __declspec(dllexport)
+#else
+#define DLL_EXPORT   __declspec(dllimport)
+#endif /* !DLL_EXPORT */
+#ifndef FT_EXPORT
+#ifdef __cplusplus
+#define FT_EXPORT( x ) extern "C" DLL_EXPORT x
+#else
+#define FT_EXPORT( x ) extern DLL_EXPORT x
+#endif
+接下来修改工程，进入工程属性的Release Multithreaded配置，我们编译多线程版本哈
+进入常规，修改配置类型为动态库
+进入C/C++ -> 预处理器，在预处理器定义中加入DLL_EXPORT
+好了，现在我们可以开始编译了。编译成功后的目录在objs\release_mt，现在可以拷贝
+freetype.dll，freetype.lib和整个include文件夹，到我们的工程中了
+2, 使用FreeType
+这里就请大家参考帖子
+http://www.unixresources.net/lin ... 0/59/21/592188.html
+里面有详细的介绍。
+下面，我说一下自己使用FreeType的心得
+1, 得到字符的正确绘制位置
+首先在创建好FTFace，Freetype推荐使用基线作为绘制基准，但是通常都是设置字符左上角的位置开始绘制。需要获
+得基线到字符轮廓最高点的距离，这个信息放在
+Ascender = FTFace->size->metrics.ascender   >> 6; // 基线到字符轮廓最高点的距离, 由于是26.6的定点数，
+因此获取整数部分需要除以64
+然后每个字符的高度是不同的，Freetype生成的bitmap一般刚刚好包围到字符，比如a和l的bitmap图高度是不同的。
+因此还需要获得每个字符的偏移宽度和高度，这两个信息放在
+bitmap_left = FTFace->glyph->bitmap_left;   // 字符距离左边界的距离
+bitmap_top = FTFace->glyph->bitmap_top; // 字符最高点距离基线的距离
+好了，现在假设要在(posx, posy)处绘制字符，(charposx, charposy)表示字符的正确绘制位置
+charposx = posx + bitmap_left;
+charposy = posy + Ascender - bitmap_top;
+2，行距
+字符轮廓最大高度放在
+FTFace->size->metrics.height       // 字符轮廓最大高度, 26.6定点数
+但是我实测发现，这个高度太高了点，所以我一般是这样用的
+Descender = FTFace->size->metrics.descender >> 6;   // // 基线到字符轮廓最低点的距离
+FontHeight   = ((FTFace->size->metrics.height >> 6) + Ascender + Descender) / 2;
+然后还可以在FontHeight上加上一个固定高度，比如1或2
+
+3，字符颜色
+Freetype生成的图是8bit灰度图(也有别的，不过8bit好看些)，文字部分为白色，背景为黑色。
+这就有个麻烦，一般字体都是黑的，那好如果把字体颜色取反，就黑的变白的，白的变黑的了。
+可是呢，要加上颜色怎么办？这就是Freetype的文字是白色的原因，因为是8bit灰度图，因此不是黑色或白色的地方
+，颜色就成了一个比例因子，只需将其与想要设置的颜色相乘再除以256即可，比如灰度图中某点的颜色是156，想要
+设置的颜色是RGB(127, 42, 186)，那么实际的颜色是
+(127 * 156 >> 8, 42 * 156 >> 8, 186 * 156 >> 8)
+回到之前说的，如果将黑的变白的，白的变黑的，那么比例因子就要再取反一次，麻烦了。
+而且，如果字体被设置过颜色后，灰度图的比例因子效果就丧失了，不能再被设置成其他颜色了(重新获取灰度图就要
+花多余的时间了)。
+解决方法是，把8bit灰度图保存在alpha通道中。如果想设置颜色就从alpha通道中获取灰度值即可。
+4，把字符变的好看些
+上面把灰度图保存在alpha通道中了，如果你的驱动支持alpha混合，那么恭喜你了，字符能和背景混合。
+不错，灰度图还兼有alpha功能，如果想好看些就做alpha混合吧。
+我的驱动不支持alpha混合，只好自己混合了。
+
+源自 http://hi.baidu.com/yq_sun2008/blog/item/cbc18bfb5a52c71e6c22eb04.html
+
